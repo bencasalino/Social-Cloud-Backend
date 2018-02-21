@@ -7,14 +7,24 @@ const cors = require("cors");
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get("/locations", (request, response) => {
+app.get("/", (request, response) => {
   queries
-    .list()
+    .list("locations")
     .then(locations => {
       response.json({ locations });
     })
-    .catch(console.error);
+    .catch(error => console.log(error));
 });
+
+app.get("/locations", (request, response) => {
+  queries
+    .list("locations")
+    .then(locations => {
+      response.json({ locations });
+    })
+    .catch(error => console.log(error));
+});
+
 app.get("/locations/:id", (request, response) => {
   queries
     .read(request.params.id)
