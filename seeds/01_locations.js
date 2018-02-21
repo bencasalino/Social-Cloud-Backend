@@ -4,32 +4,36 @@ exports.seed = function(knex, Promise) {
     .then(function() {
       return knex("locations").insert([
         {
-          name: "United States",
-          countryCode: "US",
-          url: "http://where.yahooapis.com/v1/place/23424977",
-          country: "United States",
-          parentid: 1,
-          placeType: { code: 12, name: "Country" },
-          woeid: 23424977
+          WOE_ID: 12515224,
+          ISO: "XS",
+          Name: "Pagasa Airport",
+          Language: "ENG",
+          PlaceType: "Airport",
+          Parent_ID: 23424921}
         },
         {
-          name: "San Francisco",
-          countryCode: "US",
-          url: "http://where.yahooapis.com/v1/place/2487956",
-          country: "United States",
-          parentid: 23424977,
-          placeType: { code: 7, name: "Town" },
-          woeid: 2487956
+          WOE_ID: 23424921,
+          ISO: "XS",
+          Name: "Spratly Islands",
+          Language: "ENG",
+          PlaceType: "Country",
+          Parent_ID: 1}
         },
         {
-          name: "Bangkok",
-          countryCode: "TH",
-          url: "http://where.yahooapis.com/v1/place/1225448",
-          country: "Thailand",
-          parentid: 23424960,
-          placeType: { code: 7, name: "Town" },
-          woeid: 1225448
-        }
-      ]);
+          WOE_ID: 12497559,
+          ISO: "XS",
+          Name: "Itu Aba Island",
+          Language: "ENG",
+          PlaceType: "Island",
+          Parent_ID: 23424921}
+        },
+        {
+          WOE_ID: 12497562,
+          ISO: "XS",
+          Name: "Namyit Island",
+          Language: "ENG",
+          PlaceType: "Island",
+          Parent_ID: 23424921}
+        },      ]);
     });
 };
