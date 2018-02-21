@@ -16,4 +16,4 @@
 
 - Format of  outside API --> Server API --> Frontend
 
-- Database link ![serverhost](https://social-cloud.herokuapp.com/)
+- Database link [serverhost](https://social-cloud.herokuapp.com/)
