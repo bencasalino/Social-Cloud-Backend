@@ -1,5 +1,4 @@
 # BACKEND TODO for SOCIAL WORD CLOUD
-Database link ![serverhost](https://social-cloud.herokuapp.com/)
 
 ### Getting Started
 
@@ -16,3 +15,5 @@ Database link ![serverhost](https://social-cloud.herokuapp.com/)
 
 
 - Format of  outside API --> Server API --> Frontend
+
+- Database link ![serverhost](https://social-cloud.herokuapp.com/)
