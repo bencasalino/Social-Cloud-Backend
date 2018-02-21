@@ -9,7 +9,7 @@ exports.seed = function(knex, Promise) {
           Name: "Pagasa Airport",
           Language: "ENG",
           PlaceType: "Airport",
-          Parent_ID: 23424921}
+          Parent_ID: 23424921
         },
         {
           WOE_ID: 23424921,
@@ -17,7 +17,7 @@ exports.seed = function(knex, Promise) {
           Name: "Spratly Islands",
           Language: "ENG",
           PlaceType: "Country",
-          Parent_ID: 1}
+          Parent_ID: 1
         },
         {
           WOE_ID: 12497559,
@@ -25,7 +25,7 @@ exports.seed = function(knex, Promise) {
           Name: "Itu Aba Island",
           Language: "ENG",
           PlaceType: "Island",
-          Parent_ID: 23424921}
+          Parent_ID: 23424921
         },
         {
           WOE_ID: 12497562,
@@ -33,7 +33,8 @@ exports.seed = function(knex, Promise) {
           Name: "Namyit Island",
           Language: "ENG",
           PlaceType: "Island",
-          Parent_ID: 23424921}
-        },      ]);
+          Parent_ID: 23424921
+        }
+      ]);
     });
 };
