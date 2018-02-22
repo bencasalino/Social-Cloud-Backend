@@ -7,12 +7,17 @@ const cors = require("cors");
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get("/", (request, response) => {
+app.get('/', (request, response) => {
   queries
-    .list("locations")
-    .then(locations => {
-      response.json({ locations });
-    })
+    .list('WOEID')
+    .then(woeid =>
+      queries.list('locations').then(location =>
+        response.json({
+          WOEID: WOEID,
+          locations: location
+        })
+      )
+    )
     .catch(error => console.log(error));
 });
 
@@ -57,6 +62,24 @@ app.put("/locations/:id", (request, response) => {
     .update(request.params.id, request.body)
     .then(locations => {
       response.json({ locations: locations[0] });
+    })
+    .catch(console.error);
+});
+
+app.get('/WOEID', (request, response) => {
+  queries
+    .list('WOEID')
+    .then(locations => {
+      response.json({ locations });
+    })
+    .catch(error => console.log(error));
+});
+
+app.get('/WOEID/:id', (request, response) => {
+  queries
+    .read(request.params.id)
+    .then(locations => {
+      locations ? response.json({ locations }) : response.sendStatus(404);
     })
     .catch(console.error);
 });
