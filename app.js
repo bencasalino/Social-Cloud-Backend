@@ -3,6 +3,26 @@ const app = express();
 const queries = require("./queries");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+require("dotenv").config();
+
+// var T = new Twit({
+//   consumer_key:         '...',
+//   consumer_secret:      '...',
+//   access_token:         '...',
+//   access_token_secret:  '...',
+//   timeout_ms:           60*1000,  // optional HTTP request timeout to apply to all requests.
+// })
+// app.get("/", (req, res) => {
+//   res.send(process.env.consumerSecret);
+// });
+
+var twitter = new twitter({
+  consumer_key: process.env.TWITTER_CONSUMER_KEY || keys.consumer_key,
+  consumer_secret: process.env.TWITTER_CONSUMER_SECRET || keys.consumer_secret,
+  access_token: process.env.TWITTER_ACCESS_TOKEN || keys.access_token,
+  access_token_secret:
+    process.env.TWITTER_TOKEN_SECRET || keys.access_token_secret
+});
 
 app.use(cors());
 app.use(bodyParser.json());
