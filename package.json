@@ -2,7 +2,7 @@
   "name": "social-cloud-backend",
   "version": "1.0.0",
   "description": "social cloud backend",
-  "main": "app.js",
+  "main": "index.js",
   "dependencies": {
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
