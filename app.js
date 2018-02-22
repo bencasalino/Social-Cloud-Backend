@@ -18,21 +18,7 @@ var twitter = new twitter({
 app.use(cors());
 app.use(bodyParser.json());
 
-app.get("/all-the-tweets", (request, response) => {
-  fetch("https://api.twitter.com/1.1/trends/place.json?id=1", {
-    headers: new Headers({
-      Authorization:
-      process.env.TWITTER_CONSUMER_KEY,
-      process.env.TWITTER_CONSUMER_SECRET,
-      process.env.TWITTER_ACCESS_TOKEN,
-      process.env.TWITTER_TOKEN_SECRET
-    })
-  })
-    .then(twitterResponse => twitterResponse.json())
-    .then(tweets => {
-      response.json({ tweets });
-    });
-});
+
 
 app.get("/", (request, response) => {
   queries
